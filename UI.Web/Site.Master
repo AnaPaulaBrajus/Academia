@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="UI.Web.Site" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Academia</title>
+        <link href="Styles/MasterPageStyleSheet.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            .auto-style2 {
+                width: 150px;
+                height: 503px;
+            }
+            .auto-style3 {
+                height: 503px;
+            }
+        </style>
+</head>
+<body>
+    <form id="bodyForm" runat="server">
+        <%--<asp:Menu runat="server" ID="Menu" DataSourceID="SiteMapDataSource">
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />--%>
+        <table border="1" cellpadding="0" cellspacing="0" width="100%" height="100%"> 
+        <tr> 
+            <td colspan="2" align="center" class="siteHeader">Academia</td> 
+        </tr> 
+<tr> 
+            <td valign="top" class="auto-style2"> 
+                <table border="0" width="100%" cellpadding="4" cellspacing="0" class="table2"> 
+                    <tr> 
+                        <td align="center" class="titulo">Inicio</td> 
+                    </tr> 
+                    <tr> 
+                        <td><a href="Login.aspx" id="Login">Login</a></td> 
+                    </tr>
+                    <tr> 
+                        <td><asp:HyperLink ID="defaultLink" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></td>
+                    </tr> 
+                    <tr>
+                        <td><asp:HyperLink ID="usuariosLink" runat="server" NavigateUrl="~/Usuarios.aspx">Usuarios</asp:HyperLink></td>
+                    </tr>
+                    <tr> <td><asp:HyperLink ID="personasLink" runat="server" NavigateUrl="~/Personas.aspx">Personas</asp:HyperLink></td></tr>
+                    <tr>
+                        <td><asp:HyperLink ID="especialidadesLink" runat="server" NavigateUrl="~/Especialidades.aspx">Especialidades</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="planesLink" runat="server" NavigateUrl="~/Planes.aspx">Planes</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="materiasLink" runat="server" NavigateUrl="~/Materias.aspx">Materias</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="comisionesLink" runat="server" NavigateUrl="~/Comisiones.aspx">Comisiones</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="cursosLink" runat="server" NavigateUrl="~/Cursos.aspx">Cursos</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="docentesCursosLink" runat="server" NavigateUrl="~/DocentesCursos.aspx">Insc. Docentes</asp:HyperLink></td>
+                    </tr>
+                     <tr>
+                        <td><asp:HyperLink ID="alumnosInscripcionesLink" runat="server" NavigateUrl="~/AlumnosInscripciones.aspx">Inscripciones de alumnos</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="cargarNotasLink" runat="server" NavigateUrl="~/CargarNotas.aspx">Cargar notas de alumnos</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="reportePlanesLink" runat="server" NavigateUrl="~/webReportePlanes.aspx">Reporte de Planes</asp:HyperLink></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="reporteCursosLink" runat="server" NavigateUrl="~/webReporteCursos.aspx">Reporte de Cursos</asp:HyperLink></td>
+                    </tr>
+                </table> 
+            </td> 
+             
+            <td valign="top" align="left" class="auto-style3">              
+                        <div>
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            </td> 
+        </tr> 
+
+         
+        <!-- site footer --> 
+        <tr> 
+            <td colspan="2" align="center">UTN 2022</td> 
+        </tr> 
+    </table> 
+
+
+    </form>
+</body>
+</html>
